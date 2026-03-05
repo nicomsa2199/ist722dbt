@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: dim_supplier
+    description: One row per supplier
+    columns:
+      - name: supplierkey
+        tests: [not_null, unique]
+      - name: supplierid
+        tests: [not_null, unique]
+        

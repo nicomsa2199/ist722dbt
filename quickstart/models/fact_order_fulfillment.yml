@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: fact_order_fulfillment
+    description: Order-level fact table. One row per order.
+    columns:
+      - name: orderid
+        tests: [not_null, unique]
+      - name: customerkey
+        tests: [not_null]
+      - name: employeekey
+        tests: [not_null]
+      - name: orderdatekey
+      - name: requireddatekey
+      - name: shippeddatekey
+      

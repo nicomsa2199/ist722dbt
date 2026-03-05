@@ -1,0 +1,6 @@
+version: 2
+
+models:
+  - name: obt_order_fulfillment
+    description: One big table combining fact_order_fulfillment with its dimensions.
+    

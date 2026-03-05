@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: fact_sales
+    description: Transaction fact table. One row per line item ordered.
+
+    columns:
+
+      - name: orderid
+        tests: [not_null]
+
+      - name: customerkey
+        tests: [not_null]
+
+      - name: employeekey
+        tests: [not_null]
+
+      - name: orderdatekey
+        tests: [not_null]
+
+      - name: productkey
+        tests: [not_null]
+
+      - name: quantity
+        tests: [not_null]
+
+      - name: soldamount
+        tests: [not_null]
+        

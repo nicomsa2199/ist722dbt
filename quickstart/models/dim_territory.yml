@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: dim_territory
+    description: one row is a sales coverage territory
+    columns:
+      - name: territorykey
+        tests: [not_null, unique]
+
+      - name: territoryid
+        tests: [not_null, unique]
+
+      - name: territorydescription
+        tests: [not_null]
+
+      - name: regiondescription
+        tests: [not_null]
+        

@@ -1,15 +1,69 @@
 version: 2
 
 sources:
-  - name: jaffle_shop
+  - name: conformed
     database: RAW
-    schema: JAFFLE_SHOP
+    schema: CONFORMED
     tables:
-      - name: customers
-      - name: orders
+      - name: DATEDIMENSION
+        columns:
+          - name: DATEKEY
+            tests:
+              - unique
 
-  - name: stripe
+  - name: northwind
     database: RAW
-    schema: STRIPE
+    schema: NORTHWIND
     tables:
-      - name: payment
+      - name: CUSTOMERS
+        columns:
+          - name: CUSTOMERID
+            tests: [unique]
+
+      - name: PRODUCTS
+        columns:
+          - name: PRODUCTID
+            tests: [unique]
+
+      - name: SUPPLIERS
+        columns:
+          - name: SUPPLIERID
+            tests: [unique]
+
+      - name: CATEGORIES
+        columns:
+          - name: CATEGORYID
+            tests: [unique]
+
+      - name: EMPLOYEES
+        columns:
+          - name: EMPLOYEEID
+            tests: [unique]
+
+      - name: SHIPPERS
+        columns:
+          - name: SHIPPERID
+            tests: [unique]
+
+      - name: ORDERS
+        columns:
+          - name: ORDERID
+            tests: [unique]
+
+      - name: ORDER_DETAILS
+        tests:
+          - dbt_utils.unique_combination_of_columns:
+              arguments:
+                combination_of_columns:
+                  - ORDERID
+                  - PRODUCTID
+
+      - name: REGION
+        columns:
+          - name: REGIONID
+            tests: [unique]
+
+      - name: TERRITORIES
+        columns:
+          - name: TERRITORYID
+            tests: [unique]

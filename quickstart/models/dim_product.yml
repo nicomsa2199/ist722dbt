@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: dim_product
+    description: one row per product
+
+    columns:
+      - name: productkey
+        tests: [not_null, unique]
+
+      - name: productid
+        tests: [not_null, unique]
+        

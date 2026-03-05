@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: dim_employee
+    description: Employee dimension. One row per employee.
+    columns:
+      - name: employeekey
+        tests: [not_null, unique]
+      - name: employeeid
+        tests: [not_null, unique]
+        
