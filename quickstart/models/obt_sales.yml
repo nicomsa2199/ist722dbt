@@ -1,0 +1,6 @@
+version: 2
+
+models:
+  - name: obt_sales
+    description: One big table combining fact_sales with its dimensions for BI-friendly analysis.
+    

@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: dim_date
+    description: Date dimension table. One row per calendar date.
+
+    columns:
+      - name: datekey
+        description: Surrogate key representing the date.
+        tests: [not_null, unique]
+
+      - name: date
+        description: The calendar date.
+
+      - name: year
+        description: Year of the date.
+
+      - name: month
+        description: Month number.
+
+      - name: quarter
+        description: Quarter of the year.
+
+      - name: day
+        description: Day of the month.
+
+      - name: dayname
+        description: Name of the day.
+
+      - name: monthname
+        description: Name of the month.
+        

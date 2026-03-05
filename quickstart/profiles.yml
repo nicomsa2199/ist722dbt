@@ -1,0 +1,18 @@
+user:
+  outputs:
+    default:
+      account: QMA44433.east-us-2.azure
+      auth_type: password
+      client_session_keep_alive: false
+      connect_retries: 3
+      connect_timeout: 30
+      database: RAW
+      password: Calicolombia99$
+      retry_on_database_errors: true
+      role: null
+      schema: dbt_nicomsa2199
+      threads: 6
+      type: snowflake
+      user: nsommer
+      warehouse: transforming
+  target: default
